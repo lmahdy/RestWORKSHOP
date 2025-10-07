@@ -2,6 +2,7 @@ package ressourcesRest;
 
 import entities.Module;
 import metiers.ModuleBusiness;
+import filters.Secured;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -17,6 +18,7 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("modules")
+@Secured
 public class ModuleRessources {
 
     private final ModuleBusiness moduleBusiness = new ModuleBusiness();
